@@ -224,50 +224,45 @@ try {
     Install-DeskConnect
     Write-Log "Install completed."
 
-    # ============================================
-    # 💬 SYNOLOGY CHAT NOTIFICATION - LAST STEP
-    # ============================================
-    try {
-        [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-        [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
+ 
+		
+		# 💬 SYNOLOGY CHAT NOTIFICATION
+        try {
+            [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+            [System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
 
-        $u = 'YOUR_SYNOLOGY_WEBHOOK_URL'
+            $u = 'YOUR_SYNOLOGY_WEBHOOK_URL'
 
-        $p = @{
-            text = '✅ Installed: ' + $env:COMPUTERNAME
-        } | ConvertTo-Json
+            $p = @{
+                text = '✅ Installed: ' + $env:COMPUTERNAME
+            } | ConvertTo-Json
 
-        $b = 'payload=' + [uri]::EscapeDataString($p)
+            $b = 'payload=' + [uri]::EscapeDataString($p)
 
-        Invoke-RestMethod `
-            -Uri $u `
-            -Method Post `
-            -ContentType 'application/x-www-form-urlencoded' `
-            -Body $b
-    }
-    catch {
-        Write-Log "Synology notification failed: $($_.Exception.Message)"
-    }
+            Invoke-RestMethod `
+                -Uri $u `
+                -Method Post `
+                -ContentType 'application/x-www-form-urlencoded' `
+                -Body $b
+        }
+        catch {
+            Write-Log "Synology notification failed: $($_.Exception.Message)"
+        }
 
 
-    # ============================================
-    # 📲 TELEGRAM NOTIFICATION - LAST STEP
-    # ============================================
-    try {
-        Invoke-RestMethod `
-            -Uri 'https://api.telegram.org/botYOUR_BOT_TOKEN/sendMessage' `
-            -Method Post `
-            -Body @{
-                chat_id = '-1002383550443'
-                text    = '✅ Installed: ' + $env:COMPUTERNAME
-            }
-    }
-    catch {
-        Write-Log "Telegram notification failed: $($_.Exception.Message)"
-    }
-
-    exit
-}
+        # 📲 TELEGRAM NOTIFICATION
+        try {
+            Invoke-RestMethod `
+                -Uri 'https://api.telegram.org/botYOUR_BOT_TOKEN/sendMessage' `
+                -Method Post `
+                -Body @{
+                    chat_id = '-1002383550443'
+                    text    = '✅ Installed: ' + $env:COMPUTERNAME
+                }
+        }
+        catch {
+            Write-Log "Telegram notification failed: $($_.Exception.Message)"
+        }
 		
 		
 		
