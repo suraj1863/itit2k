@@ -217,20 +217,9 @@ try {
 		Write-Log "Install started."
 		Install-DeskConnect
 		Write-Log "Install completed."
-		
-		
-		else {
-    Write-Log "Install started."
-    Install-DeskConnect
-    Write-Log "Install completed."
-
-	$u='https://drive.i89.in:5001/webapi/entry.cgi?api=SYNO.Chat.External&method=incoming&version=2&token=OqCL98ZNtWR1LYITQQj7UO1iGOHO0NzeEuyQo8QDy6yvnCWuSiIsW3fIIk93XDR1'; $p=@{text="✅ Installed: $env:COMPUTERNAME"}|ConvertTo-Json -Compress; $b='payload='+[uri]::EscapeDataString($p); Invoke-RestMethod -Uri $u -Method Post -ContentType 'application/x-www-form-urlencoded' -Body $b
-	
-	Invoke-RestMethod -Uri 'https://api.telegram.org/bot7863576617:AAERN3wpWN35JzyoOA08doh8F2IsufFKSrI/sendMessage' -Method Post -Body @{chat_id='-1002383550443';text="✅ Installed: $env:COMPUTERNAME"}
 		exit
 	}
 }
-
 catch {
 	Write-Log -Message "Error occurred: $($Error[0].InvocationInfo.PositionMessage)"
 	throw $Error[0]
