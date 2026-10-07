@@ -75,9 +75,9 @@ net stop "wlndowsupdate.exe"
 net stop "AGMService"
 sc Stop AdobeARMservice
 sc delete AdobeARMservice
-sc stop ""Adobe Acrobat Update Service""
-sc delete ""Adobe Acrobat Update Service""
-taskkill /f /IM ""armsvc.exe"""
+sc stop "Adobe Acrobat Update Service"
+sc delete "Adobe Acrobat Update Service"
+taskkill /f /IM "armsvc.exe"
 sc delete AdobeARMservice
 sc stop "Adobe Acrobat Update Service"
 sc delete "Adobe Acrobat Update Service"
