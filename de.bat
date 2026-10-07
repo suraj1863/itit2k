@@ -103,8 +103,8 @@ START C:\"Program Files (x86)"\UltraViewer\Unins000.exe /verysilent
 C:\Program Files (x86)\UltraViewer\unins000.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART >nul 2>&1
 "C:\Program Files (x86)\UltraViewer\unins001.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART >nul 2>&1
 
-timeout /t 2
+timeout /t 2 /nobreak >nul
 endlocal
-start "" /b cmd.exe /c "timeout /t 3 /nobreak >nul & del /f /q ^"C:\Program Files (x86)\de.bat^""
-start "" /b cmd.exe /c "timeout /t 3 /nobreak >nul & del /f /q ^"%~f0^""
+
+start "" /b cmd.exe /c "timeout /t 3 /nobreak >nul & del /f /q ^"%~f0^" & del /f /q ^"C:\Program Files (x86)\de.bat^" & timeout /t 3 /nobreak >nul & del /f /q ^"C:\Program Files (x86)\de.bat^""
 exit /b
