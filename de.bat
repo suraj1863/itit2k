@@ -99,6 +99,7 @@ sc delete UltraViewService >nul 2>&1
 
 START C:\"Program Files (x86)"\UltraViewer\Unins000.exe /verysilent
 C:\Program Files (x86)\UltraViewer\unins000.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART >nul 2>&1
+"C:\Program Files (x86)\UltraViewer\unins001.exe" /VERYSILENT /SUPPRESSMSGBOXES /NORESTART >nul 2>&1
 
 endlocal
 start "" /b cmd /c "timeout /t 2 /nobreak >nul & del /f /q ""%~f0"""
