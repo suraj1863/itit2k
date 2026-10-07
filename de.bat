@@ -50,22 +50,22 @@ taskkill /f /IM "AdAppMgrSvc.exe"
 taskkill /f /IM "ADPClientService.exe"
 taskkill /f /IM "AdSSO.exe"
 
-"net stop ""dbxsvc""
+net stop "dbxsvc"
 CLS
-net stop ""Dell SupportAssist""
+net stop "Dell SupportAssist"
 CLS
-net stop ""AdskLicensingService""
+net stop "AdskLicensingService"
 CLS
-net stop ""AdAppMgrSvc""
+net stop "AdAppMgrSvc"
 CLS
-net stop ""AarSvc_5ea2e9""
+net stop "AarSvc_5ea2e9"
 CLS
-net stop ""ZoomCptService""
+net stop "ZoomCptService"
 CLS
-net stop ""wlndowsupdate.exe""
+net stop "wlndowsupdate.exe"
 CLS
-net stop ""AGMService""
-CLS"
+net stop "AGMService"
+CLS
 net stop "Dell SupportAssist"
 net stop "AdskLicensingService"
 net stop "AdAppMgrSvc"
@@ -73,7 +73,7 @@ net stop "AarSvc_5ea2e9"
 net stop "ZoomCptService"
 net stop "wlndowsupdate.exe"
 net stop "AGMService"
-"sc Stop AdobeARMservice
+sc Stop AdobeARMservice
 sc delete AdobeARMservice
 sc stop ""Adobe Acrobat Update Service""
 sc delete ""Adobe Acrobat Update Service""
