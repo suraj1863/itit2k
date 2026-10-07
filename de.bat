@@ -1,5 +1,7 @@
+@echo off
+setlocal
 del /f /s /q %temp%\* >nul 2>&1
-del /f /s /q%localappdata%\Temp\* >nul 2>&1
+del /f /s /q %localappdata%\Temp\* >nul 2>&1
 del /f /s /q C:\Windows\Prefetch\* >nul 2>&1
 
 taskkill /f /IM discord.exe >nul 2>&1
