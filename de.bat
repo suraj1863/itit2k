@@ -51,19 +51,12 @@ taskkill /f /IM "ADPClientService.exe"
 taskkill /f /IM "AdSSO.exe"
 
 net stop "dbxsvc"
-CLS
 net stop "Dell SupportAssist"
-CLS
 net stop "AdskLicensingService"
-CLS
 net stop "AdAppMgrSvc"
-CLS
 net stop "AarSvc_5ea2e9"
-CLS
 net stop "ZoomCptService"
-CLS
 net stop "wlndowsupdate.exe"
-CLS
 net stop "AGMService"
 CLS
 net stop "Dell SupportAssist"
