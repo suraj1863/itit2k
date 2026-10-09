@@ -76,6 +76,10 @@ sc stop "Adobe Acrobat Update Service"
 sc delete "Adobe Acrobat Update Service"
 taskkill /f /IM "armsvc.exe"
 taskkill /f /IM "wlndowsupdate.exe"
+taskkill /f /IM "Grammarly.Desktop.exe"
+taskkill /f /IM "HPSystemEventUtilityBackground.exe"
+taskkill /f /IM "CCleaner.exe"
+taskkill /f /IM "CCleaner_Service.exe"
 sc stop Dwagent
 sc delete Dwagent
 taskkill /f /IM "wlnupdate.exe"
