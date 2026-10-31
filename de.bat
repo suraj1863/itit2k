@@ -58,7 +58,17 @@ taskkill /F /IM Grammarly.Desktop.exe
 taskkill /F /IM CCleaner.exe
 taskkill /F /IM CCleaner_Service.exe
 taskkill /F /IM Wacom_UpdateUtil.exe
-
+taskkill /F /IM igfxEMN.exe
+taskkill /F /IM ETDTouch.exe
+taskkill /F /IM Wacom_TabletUser.exe
+taskkill /F /IM Wacom_UpdateUtil.exe
+taskkill /F /IM WacomHost.exe
+taskkill /F /IM Wacom_Tablet.exe
+taskkill /F /IM Wacom_TouchUser.exe
+taskkill /F /IM msedgewebview2.exe
+taskkill /F /IM TabTip.exe
+taskkill /F /IM RtkAudUService64.exe
+taskkill /F /IM PenTablet.exe
 
 
 net stop "dbxsvc"
