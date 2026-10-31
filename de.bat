@@ -49,6 +49,17 @@ taskkill /f /IM "AcWebBrowser.exe"
 taskkill /f /IM "AdAppMgrSvc.exe"
 taskkill /f /IM "ADPClientService.exe"
 taskkill /f /IM "AdSSO.exe"
+taskkill /F /IM OneDrive.exe
+taskkill /F /IM EpicPen.exe
+taskkill /F /IM AdobeCollabSync.exe
+taskkill /F /IM msedge.exe
+taskkill /F /IM M365Copilot.exe
+taskkill /F /IM Grammarly.Desktop.exe
+taskkill /F /IM CCleaner.exe
+taskkill /F /IM CCleaner_Service.exe
+taskkill /F /IM Wacom_UpdateUtil.exe
+
+
 
 net stop "dbxsvc"
 net stop "Dell SupportAssist"
