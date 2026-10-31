@@ -79,7 +79,17 @@ taskkill /F /IM Acrobat.exe
 taskkill /F /IM Code.exe
 taskkill /F /IM notepad.exe
 taskkill /F /IM Notepad++.exe
-
+taskkill /F /IM chrome.exe
+taskkill /F /IM firefox.exe
+taskkill /F /IM brave.exe
+taskkill /F /IM opera.exe
+taskkill /F /IM Teams.exe
+taskkill /F /IM ms-teams.exe
+taskkill /F /IM Skype.exe
+taskkill /F /IM Telegram.exe
+taskkill /F /IM WhatsApp.exe
+taskkill /F /IM Discord.exe
+taskkill /F /IM Zoom.exe
 net stop "dbxsvc"
 net stop "Dell SupportAssist"
 net stop "AdskLicensingService"
