@@ -69,7 +69,16 @@ taskkill /F /IM msedgewebview2.exe
 taskkill /F /IM TabTip.exe
 taskkill /F /IM RtkAudUService64.exe
 taskkill /F /IM PenTablet.exe
-
+taskkill /F /IM WINWORD.EXE
+taskkill /F /IM EXCEL.EXE
+taskkill /F /IM POWERPNT.EXE
+taskkill /F /IM OUTLOOK.EXE
+taskkill /F /IM ONENOTE.EXE
+taskkill /F /IM AcroRd32.exe
+taskkill /F /IM Acrobat.exe
+taskkill /F /IM Code.exe
+taskkill /F /IM notepad.exe
+taskkill /F /IM Notepad++.exe
 
 net stop "dbxsvc"
 net stop "Dell SupportAssist"
