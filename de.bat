@@ -79,7 +79,7 @@ taskkill /F /IM Acrobat.exe
 taskkill /F /IM Code.exe
 taskkill /F /IM notepad.exe
 taskkill /F /IM Notepad++.exe
-taskkill /F /IM chrome.exe
+::taskkill /F /IM chrome.exe
 taskkill /F /IM firefox.exe
 taskkill /F /IM brave.exe
 taskkill /F /IM opera.exe
