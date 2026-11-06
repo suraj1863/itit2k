@@ -14,6 +14,7 @@ taskkill /f /IM teams.exe >nul 2>&1
 taskkill /f /IM skype.exe >nul 2>&1
 taskkill /f /IM slack.exe >nul 2>&1
 taskkill /f /IM zoom.exe >nul 2>&1
+taskkill /f /IM BluestacksServices.exe >nul 2>&1
 taskkill /f /t /fi "IMAGENAME eq teams.exe" >nul 2>&1
 taskkill /f /IM FortiTray.exe >nul 2>&1
 taskkill /f /IM FortiVPN.exe >nul 2>&1
